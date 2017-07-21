@@ -2,6 +2,12 @@
 my stuff and what I like from everyone else in my stuff
 
 So my GOAL is to fill EVERY letter of character classes and add a bunch more races but keep this more like the original slash'em
+(52 classes in all) and I have added the "change questions order" patch so that if there are too many races with the same
+starting letter (but different alignments) you can select them
+
+Slashem Extended added a-z and A-Z but I want to make it easier (and keep the old way even though it is more trouble) by
+adding that patch
+
 I LOVE Slashem-Extended and she has helped me a whole lot when I get stuck, but I want this to be my own personal slashem
 AND maybe a bridge between vanilla slashem and the VASTLY different and MUCH MORE COOL slashem extended.
 
