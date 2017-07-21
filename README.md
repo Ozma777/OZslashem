@@ -1,6 +1,20 @@
 # OZslashem
 my stuff and what I like from everyone else in my stuff
 
+So my GOAL is to fill EVERY letter of character classes and add a bunch more races but keep this more like the original slash'em
+I LOVE Slashem-Extended and she has helped me a whole lot when I get stuck, but I want this to be my own personal slashem
+AND maybe a bridge between vanilla slashem and the VASTLY different and MUCH MORE COOL slashem extended.
+
+I hope to have random dungeon colors (Mines and Special Levels and Dungeons) with random ice, trees, water, etc through all
+I am going to make more towns and maybe dungeon towns and sokobans too.
+Most of my classes and quests have been made by me.
+I hope to eventually get lots of dNethack in it (wards, races, classes, seals, etc.)
+I eventually want a slashem that is very close to vanilla but just a bit different and a bit harder too
+MAGES are set for 5 (chinese zodiac elements) Fire, Water, Earth, Metal (lightning), Wood (air). (mostly works so far)
+
+Unfortunately I have some compiler errors that are serious enough to NOT have line numbers just hex and stuff so I have some stuff
+to figure out before I can continue.
+
 This page WILL contain OzSlashem (did not know what to call it and it was suggested Oz because of my username)
 
 I have to make it MOSTLY finished FIRST and then it will be here.
