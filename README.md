@@ -1,4 +1,7 @@
 # OZslashem
+
+CURRENTLY BROKEN AND WILL NOT BUILD!
+
 my stuff and what I like from everyone else in my stuff
 
 So my GOAL is to fill EVERY letter of character classes and add a bunch more races but keep this more like the original slash'em
