@@ -1123,7 +1123,7 @@ const struct Race races[] = {
 {	"elf", "elven", "elvenkind", "Elf",
 	{0, 0},
 	PM_ELF, NON_PM, PM_ELF_MUMMY, PM_ELF_ZOMBIE,
-	MH_ELF | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL|ROLE_NEUTRAL,
+	MH_ELF | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL|ROLE_NEUTRAL|ROLE_CHAOTIC,
 	MH_ELF, MH_ELF, MH_ORC,
 	/*  Str    Int Wis Dex Con Cha */
 	{    3,     3,  3,  3,  3,  3 },
@@ -1135,7 +1135,7 @@ const struct Race races[] = {
 {	"gnome", "gnomish", "gnomehood", "Gno",
 	{0, 0},
 	PM_GNOME, NON_PM, PM_GNOME_MUMMY, PM_GNOME_ZOMBIE,
-	MH_GNOME | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL|ROLE_NEUTRAL,
+	MH_GNOME | ROLE_MALE|ROLE_FEMALE | ROLE_LAWFUL|ROLE_NEUTRAL|ROLE_CHAOTIC,
 	MH_GNOME, MH_DWARF|MH_GNOME, MH_HUMAN|MH_HOBBIT,
 	/*  Str    Int Wis Dex Con Cha */
 	{    3,     3,  3,  3,  3,  3 },
@@ -1159,7 +1159,7 @@ const struct Race races[] = {
 {	"ghast", "ghast", "ghasthood", "Gha",
 	{0, 0},
 	PM_GHAST, NON_PM, PM_HUMAN_MUMMY, PM_HUMAN_ZOMBIE,
-	MH_HUMAN | ROLE_MALE|ROLE_FEMALE | ROLE_CHAOTIC,
+	MH_HUMAN | ROLE_MALE|ROLE_FEMALE | ROLE_NEUTRAL|ROLE_CHAOTIC,
 	MH_HUMAN, 0, 0,
 	/*    Str     Int Wis Dex Con Cha */
 	{      3,      3,  3,  3,  3,  3 },
