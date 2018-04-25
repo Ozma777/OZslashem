@@ -2,6 +2,34 @@
 
 CURRENTLY BROKEN AND WILL NOT BUILD!
 
+the old version is prebuilt in the zip file but it is really not anywhere near ALL the changes to the source I made after.
+quick notes on https://github.com/Ozma777/OZslashem/blob/master/OzSlashem(PrebuiltOld).zip
+Rerolls and ALL other nethackTNG patches are applied and working (even though my SlashTNG https://github.com/Ozma777/SlashTNG is not)
+Another main change that will be odd is that Askorder patch has been applied:
+Name/Role/ALIGNMENT/then Race
+So if you want to play as a lawful dwarven jedi pick lawful then Dwarf
+If you want to play as a neutral Drakling (can't train weapons yet: see below) jedi pick neutral then Drakeling
+(they spit acid also so it kind of makes up temporarily for the non-training weapons skill thing
+or a chaotic Droven jedi pick chaotic then Drow (otherwise lowercase d is always doppleganger)
+
+I think ratling race and maybe giant race are unable to do sokoban properly (on the old prebuilt)..
+Ratlings chew through all boulders and Giants can move onto them if you make a mistake. Might have been fixed already for that version,I
+don't remember. It IS fixed on the new source though.
+Drakelings can NOT advance weapons skills, AT_WEAP was stupidly (by me) not a part of the draklings attack in monst.c (also fixed).
+Eventually I want to take mana away for spitting acid (drakling) and musicalize spells (bard) when I figure out how.
+ungenomold/clockwork automaton/incantifier are just simple humans they don't work yet but might work when my new source finally builds
+null race eventually will have NO starting EQ (when I figure out how to do that), but can walk through walls.
+sylph teleports so drop the gold for your chosen item in a shop IMMEDIATELY. Also eventually I want to do a mana/health combined tech
+Instead of the current healing hands AND draw energy.
+Trolls (meaning if your race is a Troll) sometimes come back from YOUR death (thanks AmyBSOD) like they would if you had killed one.
+Eventually I want to make trolls sortof like undead (including the ghast/wraith race) that you have to "age" your corpses (where if you 
+don't have sickness resist you get Ill), and can't eat fresh corpses but maybe tripe/food rations. 
+But for now trolls are sickness resistant.
+Ogres are poison resistant.
+Veelas (from slashem-extended) eventually I want a taming attack and/or a stun/confusion instead of fire.
+
+Old descriptions follow.... delete above when my source code builds again
+_____________________________________________________________________________________________________________
 my stuff and what I like from everyone else in my stuff
 
 So my GOAL is to fill EVERY letter of character classes and add a bunch more races but keep this more like the original slash'em
