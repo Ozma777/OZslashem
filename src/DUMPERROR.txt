@@ -1,0 +1,266 @@
+mingw32-make: Nothing to be done for `makefile.gcc'.
+copy /y		 ..\util\makedefs.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omakedefs.o makedefs.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omonst.o monst.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oobjects.o objects.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oalloc.o alloc.c
+copy /y		 ..\util\panic.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opanic.o panic.c
+panic.c:54:7: warning: conflicting types for built-in function 'alloca' [enabled by default]
+gcc  -mconsole -omakedefs.exe makedefs.o  monst.o	 objects.o alloc.o panic.o 
+makedefs -v
+makedefs -o
+makedefs -p
+makedefs -m
+makedefs -z
+makedefs -f
+copy /y		 ..\sys\share\lev_yacc.c lev_yacc.c
+        1 file(s) copied.
+copy /y		 ..\sys\share\lev_comp.h ..\include\lev_comp.h
+        1 file(s) copied.
+echo /**/ >>..\include\lev_comp.h
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -olev_yacc.o lev_yacc.c
+lev_yacc.c: In function 'yyparse':
+lev_yacc.c:1574:24: warning: assignment from incompatible pointer type [enabled by default]
+copy /y		 ..\sys\share\lev_lex.c lev_flex.c
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -olev_flex.o lev_flex.c
+copy /y		 ..\util\lev_main.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -olev_main.o lev_main.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odrawing.o drawing.c
+drawing.c:314:2: warning: excess elements in array initializer [enabled by default]
+drawing.c:314:2: warning: (near initialization for 'defsyms') [enabled by default]
+drawing.c:425:2: warning: excess elements in array initializer [enabled by default]
+drawing.c:425:2: warning: (near initialization for 'ibm_graphics') [enabled by default]
+drawing.c:527:2: warning: excess elements in array initializer [enabled by default]
+drawing.c:527:2: warning: (near initialization for 'dec_graphics') [enabled by default]
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odecl.o decl.c
+gcc  -mconsole  -olev_comp.exe tmp.lnk
+copy /y		 ..\sys\share\dgn_yacc.c dgn_yacc.c
+        1 file(s) copied.
+copy /y		 ..\sys\share\dgn_comp.h ..\include\dgn_comp.h
+        1 file(s) copied.
+echo /**/ >>..\include\dgn_comp.h
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odgn_yacc.o dgn_yacc.c
+copy /y		 ..\sys\share\dgn_lex.c dgn_flex.c
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odgn_flex.o dgn_flex.c
+copy /y		 ..\util\dgn_main.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odgn_main.o dgn_main.c
+gcc  -mconsole  -odgn_comp.exe tmp.lnk
+copy /y		 ..\util\recover.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orecover.o recover.c
+gcc  -mconsole -orecover.exe recover.o
+echo utilities made > utility.tag
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oallmain.o allmain.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oapply.o apply.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oartifact.o artifact.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oattrib.o attrib.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oball.o ball.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -obones.o bones.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oborg.o borg.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -obotl.o botl.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ocmd.o cmd.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odbridge.o dbridge.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odetect.o detect.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odisplay.o display.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odo.o do.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odo_name.o do_name.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odo_wear.o do_wear.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odog.o dog.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odogmove.o dogmove.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odokick.o dokick.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odothrow.o dothrow.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odungeon.o dungeon.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oeat.o eat.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oend.o end.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oengrave.o engrave.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oexper.o exper.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oexplode.o explode.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oextralev.o extralev.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ofiles.o files.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ofountain.o fountain.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ohack.o hack.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ohacklib.o hacklib.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oinvent.o invent.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -olock.o lock.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omail.o mail.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opcmain.o ../sys/share/pcmain.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omakemon.o makemon.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omcastu.o mcastu.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omhitm.o mhitm.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omhitu.o mhitu.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ominion.o minion.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omkmap.o mkmap.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omklev.o mklev.c
+mklev.c:634:1: warning: excess elements in array initializer [enabled by default]
+mklev.c:634:1: warning: (near initialization for 'trap_engravings') [enabled by default]
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omkmaze.o mkmaze.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omkobj.o mkobj.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omkroom.o mkroom.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omon.o mon.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omondata.o mondata.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omonmove.o monmove.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omonstr.o monstr.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omplayer.o mplayer.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omthrowu.o mthrowu.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omuse.o muse.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omusic.o music.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oo_init.o o_init.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oobjnam.o objnam.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ooptions.o options.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opickup.o pickup.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opline.o pline.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opolyself.o polyself.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opotion.o potion.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oquest.o quest.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oquestpgr.o questpgr.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opager.o pager.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opray.o pray.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opriest.o priest.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oread.o read.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orect.o rect.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orestore.o restore.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orip.o rip.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ornd.o rnd.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orole.o role.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orumors.o rumors.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osave.o save.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oshk.o shk.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oshknam.o shknam.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osit.o sit.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osounds.o sounds.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osp_lev.o sp_lev.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ospell.o spell.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osteal.o steal.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -osteed.o steed.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otimeout.o timeout.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otopten.o topten.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otrack.o track.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otrap.o trap.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ou_init.o u_init.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ouhitm.o uhitm.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ovault.o vault.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ovision.o vision.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ovis_tab.o vis_tab.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oweapon.o weapon.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owere.o were.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owield.o wield.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owindows.o windows.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owizard.o wizard.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oworm.o worm.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oworn.o worn.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owrite.o write.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ozap.o zap.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -olight.o light.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odlb.o dlb.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -odig.o dig.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oteleport.o teleport.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oregion.o region.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otech.o tech.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ogypsy.o gypsy.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -omapglyph.o mapglyph.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owinnt.o ../sys/winnt/winnt.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opcsys.o ../sys/share/pcsys.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -opcunix.o ../sys/share/pcunix.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -onttty.o ../sys/winnt/nttty.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -orandom.o ../sys/share/random.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ontsound.o ../sys/winnt/ntsound.c
+copy /y		 ..\sys\share\nhlan.c .
+        1 file(s) copied.
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -onhlan.o nhlan.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -oversion.o version.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -ogetline.o ../win/tty/getline.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otermcap.o ../win/tty/termcap.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -otopl.o ../win/tty/topl.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -owintty.o ../win/tty/wintty.c
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -DBUILD_DLL -onhdefkey.o ../sys/winnt/nhdefkey.c
+Linking \games\slam32d/nhdefkey.dll
+gcc -mms-bitfields -shared -Wl,--export-all-symbols \
+	-Wl,--add-stdcall-alias -o \games\slam32d/nhdefkey.dll nhdefkey.o
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -DBUILD_DLL -onh340key.o ../sys/winnt/nh340key.c
+Linking \games\slam32d/nh340key.dll
+gcc -mms-bitfields -shared -Wl,--export-all-symbols \
+	-Wl,--add-stdcall-alias -o \games\slam32d/nh340key.dll nh340key.o
+gcc -mms-bitfields -c -O -I../include -DDLB -DWIN32CON -DBUILD_DLL -onhraykey.o ../sys/winnt/nhraykey.c
+Linking \games\slam32d/nhraykey.dll
+gcc -mms-bitfields -shared -Wl,--export-all-symbols \
+	-Wl,--add-stdcall-alias -o \games\slam32d/nhraykey.dll nhraykey.o
+gcc   -oslashem.exe slashem.lnk
+allmain.o:allmain.c:(.text+0x259): undefined reference to `makemon'
+apply.o:apply.c:(.text+0x1fcf): undefined reference to `makemon'
+apply.o:apply.c:(.text+0x2287): undefined reference to `makemon'
+apply.o:apply.c:(.text+0x358c): undefined reference to `spell_known'
+apply.o:apply.c:(.text+0x7814): undefined reference to `makemon'
+artifact.o:artifact.c:(.text+0x8d0): undefined reference to `makemon'
+artifact.o:artifact.c:(.text+0x911): undefined reference to `makemon'
+artifact.o:artifact.c:(.text+0x952): undefined reference to `makemon'
+artifact.o:artifact.c:(.text+0x990): undefined reference to `makemon'
+artifact.o:artifact.c:(.text+0x9ce): more undefined references to `makemon' follow
+dog.o:dog.c:(.text+0x186): undefined reference to `mbirth_limit'
+dog.o:dog.c:(.text+0x23e): undefined reference to `makemon'
+dog.o:dog.c:(.text+0x37c): undefined reference to `makemon'
+dog.o:dog.c:(.text+0x3ef): undefined reference to `makemon'
+dog.o:dog.c:(.text+0x55f): undefined reference to `makemon'
+dog.o:dog.c:(.text+0x2248): undefined reference to `makemon'
+dokick.o:dokick.c:(.text+0x3746): more undefined references to `makemon' follow
+mhitm.o:mhitm.c:(.text+0x6a59): undefined reference to `clone_mon'
+mhitu.o:mhitu.c:(.text+0x4e3c): undefined reference to `makemon'
+mhitu.o:mhitu.c:(.text+0x5ff7): undefined reference to `is_educator'
+mhitu.o:mhitu.c:(.text+0xb0be): undefined reference to `clone_mon'
+minion.o:minion.c:(.text+0x818): undefined reference to `makemon'
+minion.o:minion.c:(.text+0x863): undefined reference to `makemon'
+minion.o:minion.c:(.text+0x8a8): undefined reference to `makemon'
+minion.o:minion.c:(.text+0xd0b): undefined reference to `makemon'
+mklev.o:mklev.c:(.text+0xbf3): undefined reference to `makemon'
+mklev.o:mklev.c:(.text+0x22e4): more undefined references to `makemon' follow
+potion.o:potion.c:(.text+0x59df): undefined reference to `clone_mon'
+pray.o:pray.c:(.text+0x2523): undefined reference to `makemon'
+priest.o:priest.c:(.text+0xa1a): undefined reference to `makemon'
+priest.o:priest.c:(.text+0x1036): undefined reference to `makemon'
+priest.o:priest.c:(.text+0x1604): undefined reference to `makemon'
+read.o:read.c:(.text+0x155d): undefined reference to `do_clear_areaX'
+read.o:read.c:(.text+0x1c0d): undefined reference to `makemon'
+read.o:read.c:(.text+0x207e): undefined reference to `makemon'
+read.o:read.c:(.text+0x20bc): undefined reference to `makemon'
+read.o:read.c:(.text+0x3492): undefined reference to `create_critters'
+read.o:read.c:(.text+0x358b): undefined reference to `makemon'
+read.o:read.c:(.text+0x35cc): undefined reference to `makemon'
+read.o:read.c:(.text+0x360d): undefined reference to `makemon'
+read.o:read.c:(.text+0x364b): undefined reference to `makemon'
+read.o:read.c:(.text+0x3689): undefined reference to `makemon'
+restore.o:restore.c:(.text+0x6f9): undefined reference to `propagate'
+shk.o:shk.c:(.text+0x15ac): undefined reference to `makemon'
+shknam.o:shknam.c:(.text+0x2ee): undefined reference to `makemon'
+shknam.o:shknam.c:(.text+0x310): undefined reference to `makemon'
+shknam.o:shknam.c:(.text+0x1010): undefined reference to `makemon'
+sit.o:sit.c:(.text+0xd8a): undefined reference to `makemon'
+sp_lev.o:sp_lev.c:(.text+0x1355): more undefined references to `makemon' follow
+uhitm.o:uhitm.c:(.text+0x33ef): undefined reference to `clone_mon'
+uhitm.o:uhitm.c:(.text+0x4a07): undefined reference to `makemon'
+uhitm.o:uhitm.c:(.text+0x8ab4): undefined reference to `makemon'
+vault.o:vault.c:(.text+0x1bd1): undefined reference to `makemon'
+were.o:were.c:(.text+0x828): undefined reference to `makemon'
+wizard.o:wizard.c:(.text+0x971): undefined reference to `makemon'
+wizard.o:wizard.c:(.text+0xb39): more undefined references to `makemon' follow
+worm.o:worm.c:(.text+0x8c8): undefined reference to `clone_mon'
+zap.o:zap.c:(.text+0x44b): undefined reference to `makemon'
+zap.o:zap.c:(.text+0x821): undefined reference to `makemon'
+zap.o:zap.c:(.text+0x8ec): undefined reference to `makemon'
+zap.o:zap.c:(.text+0x27da): undefined reference to `makemon'
+zap.o:zap.c:(.text+0x60fe): undefined reference to `makemon'
+zap.o:zap.c:(.text+0xce92): undefined reference to `create_critters'
+zap.o:zap.c:(.text+0xceb6): undefined reference to `create_critters'
+zap.o:zap.c:(.text+0xcfad): undefined reference to `makemon'
+dig.o:dig.c:(.text+0x87f): undefined reference to `makemon'
+dig.o:dig.c:(.text+0x953): undefined reference to `makemon'
+dig.o:dig.c:(.text+0x466a): undefined reference to `makemon'
+dig.o:dig.c:(.text+0x4688): undefined reference to `makemon'
+region.o:region.c:(.text+0x315): more undefined references to `makemon' follow
+collect2: ld returned 1 exit status
+mingw32-make: *** [\games\slam32d\slashem.exe] Error 1
