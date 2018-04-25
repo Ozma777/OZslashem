@@ -22,7 +22,7 @@
  * to the roles has been reduced by the amount allocated to
  * humans.  --KMH
  *
- * God names use a leading underscore to flag goddesses.
+ *  God names use a leading underscore to flag goddesses.
  */
 const struct Role roles[] = {
 {	{"Archeologist", 0}, {
