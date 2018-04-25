@@ -1,0 +1,9 @@
+diff -Nurd original-nethack-dir/ changed-nethack-dir/
+
+diff -Nurd slashemOrig/ Slashem3/
+
+diff -Nurd slashem-0.0.7E7F3/ SlashTHEM-master/
+
+THERE ARE NO / I JUST PUT THEM IN TO KNOW WHAT I AM NEEDING AS FAR AS NAMES
+
+diff -Nurd nethack-3.4.3-master nethack-3.6.0>getthestatues2worknethack.diff
