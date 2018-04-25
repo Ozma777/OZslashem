@@ -1,0 +1,506 @@
+#	SCCS Id: @(#)Fighter.des	3.4	1992/09/26
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991,92 by M. Stephenson, P. Winner
+#copyleft -Ozma
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, The Master Warrior
+#	and receive your quest assignment.
+#
+MAZE: "Fig-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+.....PP...PP......P.P....P..P..................T............................
+......P....P.......P..T...PP...................................T............
+.T.....PP...P......PP....T..P..........T....................................
+........PP.P.|-++-|PPP......PP..............................................
+....T....PP----++----PP.T..PP........................T......................
+........PPP||......||PPP..PPP...............T..........................T....
+..T....PPP--........--PPP.PP.....T..........................................
+.......PP||..........||PPPPP................................T...............
+P......P|-............-|PPP.T...............................................
+PP..T.PP||............||PPP...............T.............................T...
+PPP..PP|-..............-|PP........................T........................
+PP..PP|-................-|P........T........................................
+PP.PPP||................||PP.......................................T........
+PPPPPP||................||PPP.T...........................T.................
+PPPPPP|-................-|PPP...................T......................T....
+PPPPPPP|-..............-|PPPP.......T.......................................
+PPPPPPPP||............||PPPPPP......................T........T..............
+PPPPPPPP|-............-|PPPPP...............................................
+PPPPPPPPP||..........||PPPPPPP............T.......................T.........
+PPPPPPPPPP-||||..||||-PPPPPPPPP...T.....................................T...
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# Stairs
+STAIR:(16,19),down
+# Portal arrival point
+BRANCH:(73,18,73,18),(0,0,0,0)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# river monsters
+MONSTER:';',"kraken",(03,17)
+MONSTER:';',"kraken",(03,12)
+MONSTER:';',"kraken",(29,03)
+MONSTER:';',"kraken",(28,15)
+MONSTER:';',"kraken",(19,02)
+MONSTER:';',"trout",(02,16)
+MONSTER:';',"trout",(01,14)
+MONSTER:';',"trout",(03,18)
+MONSTER:';',"trout",(01,17)
+MONSTER:';',"trout",(28,00)
+MONSTER:';',"trout",(20,00)
+MONSTER:';',"trout",(11,01)
+MONSTER:';',"giant eel",(07,19)
+MONSTER:';',"giant eel",(23,06)
+MONSTER:';',"giant eel",(20,03)
+MONSTER:';',"electric eel",(09,05)
+MONSTER:';',"electric eel",(27,05)
+# Doors
+DOOR:locked,(15,03)
+DOOR:locked,(16,03)
+# Monsters on siege duty. (make them all randomish but outside the complex)(26,00,75,19) majority
+MONSTER: random,random,(02,04)
+MONSTER: random,random,(28,08)
+MONSTER: random,random,(30,07)
+MONSTER: random,random,(38,05)
+MONSTER: random,random,(41,11)
+MONSTER: random,random,(49,16)
+MONSTER: random,random,(51,05)
+MONSTER: random,random,(64,08)
+MONSTER: random,random,(61,12)
+MONSTER: random,random,(35,13)
+MONSTER: random,random,(44,09)
+MONSTER: random,random,(73,11)
+MONSTER: random,random,(71,09)
+MONSTER: random,random,(69,17)
+MONSTER: random,random,(63,13)
+MONSTER: random,random,(54,10)
+MONSTER: random,random,(58,15)
+MONSTER: random,random,(70,05)
+MONSTER: random,random,(67,06)
+MONSTER: random,random,(36,13)
+MONSTER: random,random,(03,08)
+MONSTER: random,random,(62,12)
+MONSTER: random,random,(60,08)
+MONSTER: random,random,(74,13)
+MONSTER: random,random,(29,10)
+MONSTER: random,random,(32,19)
+MONSTER: random,random,(47,16)
+MONSTER: random,random,(52,03)
+MONSTER: random,random,(70,01)
+MONSTER: random,random,(48,07)
+MONSTER: random,random,(66,05)
+MONSTER: random,random,(35,03)
+# Master Warrior
+MONSTER:'@',"Master Warrior",(15,18)
+REGION:(14,17,17,18),lit,"throne",unfilled
+# The treasure of the Master Warrior
+OBJECT:'(',"chest",(15,19)
+OBJECT:'(',"chest",(02,12)
+# gladiators in the audience chamber (locations all set)
+MONSTER:'@',"gladiator",(13,05)
+MONSTER:'@',"gladiator",(17,09)
+MONSTER:'@',"gladiator",(19,11)
+MONSTER:'@',"gladiator",(16,15)
+MONSTER:'@',"gladiator",(18,17)
+MONSTER:'@',"gladiator",(14,18)
+MONSTER:'@',"gladiator",(13,13)
+MONSTER:'@',"gladiator", random
+MONSTER:'@',"gladiator",(23,12)
+MONSTER:'@',"gladiator",(09,13)
+MONSTER:'@',"gladiator",(16,13)
+# path guards
+MONSTER:'@',"watch captain",(14,02)
+MONSTER:'@',"watch captain",(17,02)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+
+#
+#	The "locate" level for the quest.
+#
+#	Here you have to fight your way across the
+#	land further towards your assigned quest.
+#
+
+MAZE: "Fig-loca",' '
+FLAGS: hardfloor
+GEOMETRY:center,center
+MAP
+PP..................PPPPPPPPP.....PPPPPP.............T...................PPP
+.........T...........PPPPPPP.......PPPPP...................................P
+.......................PPPPPP.......PPPPP.........T.........................
+P...........T....................T...PPPPP..............PP....T............P
+PPPP...................................PPPP....T.......PPP................PP
+PPPPP......T............PP....T.........PP.............PP..................P
+PPPPPP.................PPP...........T............................T.........
+PPPPPP..................PPP...................T.............................
+PPPPP...................PP...T..........P.................................PP
+PPPP.........T.........PP...............PP...............................PPP
+PPP....................P.................P........T............T..........PP
+PPPP..............................T........................................P
+PPPP............T...........................T........PP.....................
+PP.............................T....................PPPP....................
+P....T....P.........PPPP.............................PPPP..................P
+P.........PP.........PPP................PP....T.......PPP.......T.........PP
+PP.......PP....T......PP.....T.........PPP.............PPP..........T.....PP
+........PPP...........PP...............PP...T.........PPP..................P
+.......PPPP..........PPP..............PP..........T...PPPP..................
+P.....PPPPPP........PPPPP............PPP..............PPPPP....T............
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+NON_DIGGABLE:(00,00,75,19)
+#
+REGION:(06,01,11,02),random,"ordinary"
+REGION:(24,01,29,02),random,"ordinary"
+REGION:(31,01,36,02),random,"ordinary"
+REGION:(42,01,45,03),random,"ordinary"
+REGION:(53,01,58,02),random,"ordinary"
+REGION:(24,04,26,05),random,"ordinary"
+REGION:(30,06,34,07),random,"ordinary"
+REGION:(73,05,74,05),unlit,"ordinary"
+REGION:(01,09,04,12),random,"ordinary"
+REGION:(01,14,07,15),random,"ordinary"
+REGION:(12,12,20,13),random,"ordinary"
+REGION:(13,17,20,18),random,"ordinary"
+REGION:(22,09,24,10),random,"ordinary"
+REGION:(22,12,24,12),random,"ordinary"
+REGION:(24,16,28,18),random,"ordinary"
+REGION:(28,11,33,12),random,"ordinary"
+REGION:(35,11,36,12),lit,"ordinary"
+REGION:(38,08,41,12),random,"ordinary"
+REGION:(43,07,49,08),random,"ordinary"
+REGION:(43,12,49,12),random,"ordinary"
+REGION:(44,16,51,16),random,"ordinary"
+REGION:(53,06,59,07),random,"ordinary"
+REGION:(61,06,71,07),random,"ordinary"
+REGION:(55,16,59,18),random,"ordinary"
+REGION:(63,11,68,12),random,"ordinary"
+REGION:(70,11,72,12),random,"ordinary"
+# Stairs
+STAIR:random,up
+STAIR:random,down
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet the The Dark Warrior your nemesis monster.  You have to
+#	defeat the The Dark Warrior in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Fig-goal", ' '
+GEOMETRY:center,center
+MAP
+...............          ..........................        .L...............
+..............L..       ........................L...       ..............L..
+..................     ..........L...................     .........L........
+.........L.........   ...L............................   ...................
+....................  ...............................     ..L............   
+.L.......................................L..........        ............    
+.............................L.................L.....     ......L......     
+..........L.........................L..................   ..............    
+...................  ....................................................   
+...L..............    .....L.............................L................. 
+..........L......      ......................L.................L............
+..................     ............L........................................
+...................    .................  ..................................
+.............L......   ......L.........   .....................L.......L....
+.L...................   ...............  .........L.........................
+.......L..............  ...............   .................L................
+.....................   ...............   ..........................  ......
+.............L........  .........L....     ........................    .....
+.........L............  .............       .........L...........       ....
+...L.................    ..L........         ............L.....          ...
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+#
+REGION:(06,01,11,02),random,"ordinary"
+REGION:(24,01,29,02),random,"ordinary"
+REGION:(31,01,36,02),random,"ordinary"
+REGION:(42,01,45,03),random,"ordinary"
+REGION:(53,01,58,02),random,"ordinary"
+REGION:(24,04,26,05),random,"ordinary"
+REGION:(30,06,34,07),random,"ordinary"
+REGION:(73,05,74,05),unlit,"ordinary"
+REGION:(01,09,04,12),random,"ordinary"
+REGION:(01,14,07,15),random,"ordinary"
+REGION:(12,12,20,13),random,"ordinary"
+REGION:(13,17,20,18),random,"ordinary"
+REGION:(22,09,24,10),random,"ordinary"
+REGION:(22,12,24,12),random,"ordinary"
+REGION:(24,16,28,18),random,"ordinary"
+REGION:(28,11,33,12),random,"ordinary"
+REGION:(35,11,36,12),lit,"ordinary"
+REGION:(38,08,41,12),random,"ordinary"
+REGION:(43,07,49,08),random,"ordinary"
+REGION:(43,12,49,12),random,"ordinary"
+REGION:(44,16,51,16),random,"ordinary"
+REGION:(53,06,59,07),random,"ordinary"
+REGION:(61,06,71,07),random,"ordinary"
+REGION:(55,16,59,18),random,"ordinary"
+REGION:(63,11,68,12),random,"ordinary"
+REGION:(70,11,72,12),random,"ordinary"
+# Stairs
+STAIR:random,up
+MONSTER:'@',"The Dark Warrior",(01,01),hostile
+# Objects
+OBJECT:')',"magic boomerang", (01,01), blessed, 0, "The Shakruum Of Power"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+
+#
+#	The "fill" level for the quest.
+#
+#	This level is used to fill out any levels not occupied by specific
+#	levels as defined above.
+#
+
+MAZE: "Fig-fila" , ' '
+INIT_MAP: '.' , 'T', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+# monsters
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+
+MAZE: "Fig-filb" , ' '
+INIT_MAP: '.' , 'T', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+# monsters
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random

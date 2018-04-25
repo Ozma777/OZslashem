@@ -1,0 +1,427 @@
+#	SCCS Id: @(#)Instrumentalist.des	3.4	1992/09/26
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991,92 by M. Stephenson, P. Winner
+#       Copyleft -Ozma777
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, The Master Musician
+#	and receive your quest assignment.
+#
+MAZE: "Ins-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTT....TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT....TTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTT..TT..TTTTTTTTTTTTTT....TTTTTTTTTTT..TT..TTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTT..TT..TTTTTTTTTTTT..TT....TTTTTTT..TTTT...TTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTT..TTTT...TTTTTTTTT..TTTTTT..TTTTT..TTTTTTT..TTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTT..TTTTT..TTTTTTTTTTT..TTTT..TTTTTTT..TTTTTTT...TTTTTT
+TTTTTTTTTTTTTTTTTTTTTT..TTTTTTT...TTTTTTTTTT...TTT...TTTTTT...TTTTTTT..TTTTT
+TTTTTTTTTTTTTTTTTTTTTTT..TTTTTTTT..TTTTTTTTTTT..TTTT..TTTTTTT..TTTTT..TTTTTT
+TTTTTTTTTTTTTTTTTTTTTT+++TTTTTTTTT...TTTTTTTT..TTTTTT..TTTTT..TTTTT...TTTTTT
+..................wwwwwwwwTTTTTTT..TTTTTTTTT..TTTTTTTT..TTT..TTTTTT..TTTTTTT
+...................wwwwwwTTTTTTTTT...TTTTTT..TTTTTTT...TTT..TTTTTT...TTTTTTT
+..................wwwwwwwTTTTTTTTTTT...TTT..TTTTTTT..TTTTTT..TTTT..TTTTTTTTT
+...................wwwwwwwTTTTTTTTTTTT..TTT..TTTTTTT..TTTTTT..TTTT..TTTTTTTT
+....................wwwwTTTTTTTTTTTTT..TTTTT...TTTTTT..TTTTTT..TT..TTTTTTTTT
+.....................wwwTTTTTTTTTTTTT....TTTTT..TTTT....TTTT..TTTT..TTTTTTTT
+......................wwTTTTTTTTTTTTTTT....TT..TTTTTT...TTT..TTTTT....TTTTTT
+.........................TTTTTTTTTTTTTTTTT..TT..TTTTTT..TT..TTTTT.....TTTTTT
+..........................TTTTTTTTTTTTTTTTT....TTTTTTTT....TTTTTT.....TTTTTT
+...........................TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT.....TTTTTT
+............................TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT...TTTTTTT
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# Stairs
+STAIR:(27,19),down
+# Portal arrival point
+BRANCH:(67,17,67,17),(0,0,0,0)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Doors
+DOOR:locked,(22,08)
+DOOR:locked,(23,08)
+DOOR:locked,(24,08)
+# shops in the bazaar I origanally wanted JUST shopkeepers
+# that way maybe you could charge things update armor/weapons and identify without shops
+# tried in wizard mode to wish a shopkeeper and ended up wishing shopkeeper figurine
+# but can't (p)ay them for anything
+# going to try shop descriptions with no walls
+REGION:(00,09,04,12),lit,"shop"
+REGION:(00,15,04,19),lit,"wand shop"
+REGION:(07,09,11,12),lit,"weapon shop"
+REGION:(07,15,11,19),lit,"armor shop"
+REGION:(13,09,17,12),lit,"potion shop"
+REGION:(13,15,17,19),lit,"food shop"
+# Monsters on siege duty.
+MONSTER: random,random,(37,05)
+MONSTER: random,random,(27,01)
+MONSTER: random,random,(67,16)
+MONSTER: random,random,(68,08)
+MONSTER: random,random,(57,17)
+MONSTER: random,random,(52,14)
+MONSTER: random,random,(54,09)
+MONSTER: random,random,(58,17)
+MONSTER: random,random,(69,06)
+MONSTER: random,random,(44,03)
+MONSTER: random,random,(44,05)
+MONSTER: random,random,(69,15)
+MONSTER: random,random,(59,05)
+MONSTER: random,random,(54,16)
+MONSTER: random,random,(35,08)
+MONSTER: random,random,(26,03)
+MONSTER: 'X',random,(55,17)
+MONSTER: 'X',random,(66,16)
+MONSTER: 'X',random,(63,01)
+MONSTER: 'X',random,(46,02)
+MONSTER: 'X',random,(61,08)
+#THRONE
+REGION:(26,19,26,19),lit,"throne"
+# Master Musician
+MONSTER:'@',"Master Musician",(26,19)
+# The treasure of the Master Musician
+OBJECT:'(',"chest",(25,19)
+# musicians in the audience chamber
+MONSTER:'@',"musician",(00,09)
+MONSTER:'@',"musician",(23,19)
+MONSTER:'@',"musician",(05,11)
+MONSTER:'@',"musician",(11,15)
+MONSTER:'@',"musician",(13,10)
+MONSTER:'@',"musician",(23,13)
+MONSTER:'@',"musician",(21,11)
+MONSTER:'@',"musician",(19,14)
+MONSTER:'@',"musician",(14,17)
+MONSTER:'@',"musician",(03,18)
+MONSTER:'@',"musician",(15,15)
+# path guards
+MONSTER:'@',"watchman",(21,09)
+MONSTER:'@',"watchman",(25,09)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+
+#
+#	The "locate" level for the quest.
+#
+#	Here you have to find the Thieves' Guild Hall to go
+#	further towards your assigned quest.
+#changed w to C in next parts
+
+MAZE: "Ins-loca",' '
+FLAGS: hardfloor
+INIT_MAP: '.','T', true, true, random, true
+NOMAP 
+#didn't work with foreground 'w' so just added metal locate for now
+#GEOMETRY:center,center
+#MAP
+#    ....     ..   ...     .. .....    ..
+#   ... .    .  .  . .       . . ..     .
+#  .   . ..T.A..A............ . .  .     
+#..   ...A........T.. .......A....  .   .
+#.  .....AC.P....... . ....A...PT..  ....
+#  .....AAAC C..... .A. .A.....T....   ..
+#........ACC  .... .T... .A..PT.T....   .
+#  .....A.A.AC...T...C...C... .T......   
+#.  ....AT....C. .........T.PT........  .
+#..   .A..TA... .T.......T....T.....   ..
+#  .   ..A...T...............T...     .  
+#   ..    A.A A .   .AA A. A . A   ...    
+#   ....A.AA  . AA.A  .A   .  .  ....   .
+#ENDMAP
+# Dungeon Description
+#took out REGION:(00,00,75,19),lit,"ordinary"
+#took out NON_DIGGABLE:(00,00,75,19)
+#
+# Stairs
+STAIR:random,up
+STAIR:random,down
+# Non diggable walls
+#NON_DIGGABLE:(00,00,75,19) shouldn't matter since it should be a maze of trees and shallow water
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet the Obsessed Fan your nemesis monster.  You have to
+#	defeat the Obsessed Fan in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Ins-goal", ' '
+GEOMETRY:center,center
+MAP
+................................................T...........................
+..........T.................................................................
+....L...............L.............L....................T......L......T......
+............................................................................
+..........L.............T.......T......T....................................
+........................................................................L...
+..T..................T.........................L........T...................
+...............................................................T............
+..........T................T....L...........................................
+...................L...............................T................T.......
+..........................................................L.................
+............T................|------++------|...............................
+......................T......|..............|...............................
+........L.........L..........|..............|.....T......................T..
+..........................|--|..............|--|..................L.........
+.....T....................|....................|.......T....................
+..........................|....................|..................T.........
+...............L..........|--|..............|--|.....L......................
+...L.................T.......|..............|.............T...........L.....
+..........T..................|--------------|...................T...........
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# The tragic end to some failed experiments on the inmates (game doesnt like random morgues?)
+#REGION:random,unlit,"morgue"
+#REGION:random,unlit,"morgue"
+#REGION:random,unlit,"morgue"
+#REGION:random,unlit,"morgue"
+#REGION:random,unlit,"morgue"
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Stairs
+STAIR:random,up
+# Doors
+DOOR:locked,(36,11)
+DOOR:locked,(37,11)
+# unaligned altar
+ALTAR:(37,18),noalign,altar
+# Objects
+OBJECT:'(',"guitar",(36,18),blessed,0,"The Guitar Of All Worlds"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'@',"The Obsessed Fan",(36,18),hostile
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+# "crazies"
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+MONSTER:'@',"inmate",random
+
+#
+#	The "fill" level for the quest.
+#
+#	This level is used to fill out any levels not occupied by specific
+#	levels as defined above.
+#
+
+MAZE: "Ins-fila" , ' '
+INIT_MAP: '.' , 'w', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+# Random monsters.
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+
+MAZE: "Ins-filb" , ' '
+INIT_MAP: '.' , 'T', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+# Random monsters.
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: 'X',random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random

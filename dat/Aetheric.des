@@ -1,0 +1,312 @@
+#       SCCS Id: @(#)Aetheric.des       3.4     1991/09/30
+#       Copyright (c) 1989 by Jean-Christophe Collet
+#       Copyright (c) 1991-2 by M. Stephenson
+#       Copyleft Ozma777
+# NetHack may be freely redistributed.  See license for details.
+#
+#       The "start" level for the quest.
+#
+#       Here you meet your (besieged) class leader, the High Flame Mage,
+#       and receive your quest assignment.
+#
+MAZE: "Aet-strt",' '
+FLAGS: hardfloor
+GEOMETRY:center,center
+MAP
+FCFFFFCCTFFFFFFFFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+FFCFFFCFCTFFFFFFFFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+FCFFCTCTFAAAFFFFFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+FFC.....TTTTAFFFFFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTF-FTT
+FFF.CFFFTTTTAFFFAA.A...FFTTTTTTTTTTTTTTTTTTTTCPPPP.PPFTAAT.AAAAAAA..AT-FAF-A
+FCF.FFFFTTTT.FFFA.AAAFFFFFFCFFFFFFFCFFFFFFFFFFAPP.PPFAATAAA.AATAA.A.AA|AAA|A
+FFF.FFTTTAAAT.FF.AAAFFFPFFCFFFFCFFFFFFFFFCFFFCFTPP.AAFTAAAAA.AAA.AAA.A|AAA|A
+FFF.FTTTAAATTT..AAAAFFFFPPCCCCCCFFFFFFCFFFCCCCTAP.PAFAATAATAA.A.AATAA.-FSF-A
+CFF.FFFPPFFCFCF.AAAFFFFPPCCCCCCCCCCCCCCCCCCCCCCTAP.PPFAAATAAAA.ATAAATA.A.AAA
+FTF.FFPTPCFFFFFFF.AFFFPPPCCCCCCCCC......CCCCCTTCAAP.PAFTAATAAA.AAATAAAA.AATA
+FFTT.PTTPTFFCFFFFFFFCFPPFFFFCCCC..........CCCTCCATPP.PAFFAAATA.ATAAAAAATAAAA
+FFTT...TTPFFFFFFFCFFFPPPFFFCCCC............CCACATCA.PPCPPFTAAA.AAAAATAAAAAAA
+FTT.....TTPPFFFFFFFFCFPPFFFTCCCC..........CCCCTTAATA.PPCPFAATA.AATAAAAAAATAA
+FTTT...TTTPFFFF.ACFFFFPPPFFACTCCCC......CTCCTCACATACA.PCPAFTAAA.AATAA.ATAATA
+FFFTT.TTTPFFCF.AAAPFFFPPPPFFAACTCCCCCCCCCATACAATACAATA.PCCFAAATA.AAA.AATAAAA
+F.FFTTTTPFFCFF.AAAAPPFFPPPFFAATACTCTCTCCCTACAACAAATACA.PPCAFTAATA.AA..AAAATA
+AAAAAAATAPAACTT.AAPPPTCPPPFFATAATATACACCAACACAATCAAAC.PPAPCAFATAAT.....TAAAA
+AA.AAA.TTAPATCCT.APTACPCPFFTTTATTAFATCAAAAACAACATCAC.PPAAPPCFAAATAA....AAATA
+AAAAAA.AAACPTCCCTP.T.PPPCFCATCACAATCCFACAFCACFAATACAPPA..APPCAFTAAAA..AATAAA
+AAAAAAAAAAAPATCTAATATPPFFCATAATAFTAATCAFAAFAFAATAAAPPAA..APPCFAAATATAAATAATA
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'R', 'E'
+# Dungeon Description
+REGION:(00,00,75,19),random,"ordinary"
+# Portal arrival point
+BRANCH:(7,12,7,12),(0,0,0,0)
+OBJECT: ')', "battle-axe", (06,12)
+# Stairs
+STAIR:(69,14),down
+# Air Temple
+ALTAR:(72,04),noalign,altar
+# High Wood Mage
+MONSTER:'@',"High Wood Mage",(36,11)
+# The treasure of the High Wood Mage
+OBJECT:'(',"chest",(37,11)
+OBJECT:'(',"chest",(57,08)
+OBJECT:'(',"ice box",(14,18)
+OBJECT:'(',"ice box",(72,11)
+# guards for the audience chamber
+#lol "airheads"
+MONSTER:'@',"airhead",(34,09)
+MONSTER:'@',"airhead",(34,10)
+MONSTER:'@',"airhead",(34,11)
+MONSTER:'@',"airhead",(34,12)
+MONSTER:'@',"airhead",(34,13)
+MONSTER:'@',"airhead",random
+MONSTER:'@',"airhead",random
+MONSTER:'D',"baby yellow dragon",random,peaceful
+MONSTER:'D',"yellow dragon",random,peaceful
+MONSTER:'D',"yellow dragon",random,peaceful
+# Non diggable 
+NON_DIGGABLE:(00,00,75,19)
+# Random traps
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+# Monsters on siege duty.
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'E',"lightning elemental",random,hostile
+MONSTER: 'D',"wyvern",random,hostile
+MONSTER: 'D',"wyvern",random,random
+MONSTER: 'D',"wyvern",random,hostile
+MONSTER: 'D',"wyvern",random,random
+MONSTER: 'E',"air elemental",random,peaceful
+MONSTER: 'E',"noxious elemental",random,peaceful
+MONSTER: 'E',"air elemental",random,peaceful
+ 
+#
+#       The "locate" level for the quest.
+#
+#       Here you have to find the cave of Surtur to go
+#       further towards your assigned quest.
+#
+
+MAZE: "Aet-loca",'C'
+FLAGS: hardfloor
+INIT_MAP: '.' , 'T' , true , true , lit , false
+GEOMETRY:center,center
+MAP
+PPPP.FFF          SS         FFF..PPPPP.
+PTP...FF      ..........     FF .PPTTTPP
+PPP    FF...................FF    PPPTTP
+..   .FF.....................FF..   PPPP
+.  ..FF.......................FF..  ....
+  ..FF.........................FF..   ..
+...FF...........................FF..   .
+  ..FF...........................FF..   
+.  ..FF.........................FF...  .
+..   .FF.......................FF..   PP
+.PPP  .FF....................FF.     PTP
+.PTTP FF      ..........      FF  ..PTTP
+.PPPP.FFF         SS         FFF....PPPP
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'E', 'R'
+# Dungeon Description
+REGION:(00,00,39,12),lit,"ordinary"
+# Stairs
+STAIR:(70,03),up
+STAIR:(20,06),down
+# Non diggable walls
+# OUT OF RANGE? I think NOT! I'll just put this here for now...:NON_DIGGABLE:(00,00,75,19)S
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:"magic",random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'D',"blue dragon",random,hostile
+MONSTER:'D',"blue dragon",random,hostile
+MONSTER:'D',"baby hydra",random,hostile
+MONSTER:'D',"baby hydra",random,hostile
+
+#
+#       The "goal" level for the quest.
+#
+#       Here you meet The Electric Mage your Nemesis.  You have to
+#       defeat The Electric Mage in combat to gain the artifact you have
+#       been assigned to retrieve.
+#
+
+MAZE: "Aet-goal", 'C'
+INIT_MAP: '.' , 'P' , true , true , lit , false
+GEOMETRY:center,center
+MAP
+.....AFTF.TFTAFAFAFTFFAFAFATFA.....
+...FTF.TFTFAFFTFF.AF.T.TFAFAFFTF...
+..FTFTFAF.FTF.AT.AA.FAFAFTFFTFFAF..
+.TFFA.FTFAFF|---------|FTFTAF.TFFF.
+.F.FFAFTF.|--.........--|TFF.FF.FA.
+FTFTF.FFT|-....FSSSF....-|FTF.FTATF
+TAFF.ATFF|....FFFSFFF....|FFTTAFF.F
+F.TFFFAF|-..FFS.....SFF..-|.FTFATFF
+TFFTATFF|...FSF.....FSF...|FTF.FTTF
+FTAFFAFF|-..FSF.....FSF..-|FAFTFAFT
+FATF.FTFA|..FFSFFSFFSFF..|FAFTAFFTF
+FTF.TFAFF|-....FSSSF....-A.FAFTTAFF
+.FAFF.FFFF|--.........--|FTAFATFFT.
+.TF.AFTF.FAF|---------|FA.F.FTFATF.
+..AFFT.AFTF.FFAF.AA.FTTF.FATFAFTF..
+...FAAFT.FFTF.FFA.AF.F.FAFTF.FAF...
+.....FTFAF.FAFFTFAF.F.FTFTFATF.....
+ENDMAP
+# Random Monsters
+RANDOM_MONSTERS: 'E', 'R'
+# Dungeon Description
+REGION:(00,00,34,16),lit,"ordinary"
+# Stairs
+# Note:  The up stairs are *intentionally* off of the map.
+STAIR:(45,10),up
+# Non diggable walls
+NON_DIGGABLE:(00,00,34,16)
+# Drawbridges
+DRAWBRIDGE:(17,02),south,closed
+DRAWBRIDGE:(17,14),north,closed
+# Objects
+OBJECT:')',"magic boomerang",(17,08),blessed,0,"The Air Crystal"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# KMH, balance patch 2 -- all quests now have an altar
+ALTAR:(17,08),noalign,altar
+# Random monsters.
+MONSTER:'@',"Electric Mage",(17,08)
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"lightning elemental",random,hostile
+MONSTER:'E',"air elemental",random,peaceful
+MONSTER:'E',"air elemental",random,peaceful
+MONSTER:'E',"air elemental",random,peaceful
+MONSTER:'D',"blue dragon",random,hostile
+MONSTER:'D',"baby hydra",random,hostile
+MONSTER:'D',"baby hydra",random,hostile
+MONSTER:'D',"wyvern",random,hostile
+MONSTER:'D',"wyvern",random,hostile
+
+#
+#       The "fill" levels for the quest.
+#
+#       These levels are used to fill out any levels not occupied by specific
+#       levels as defined above. "filla" is the upper filler, between the
+#       start and locate levels, and "fillb" the lower between the locate
+#       and goal levels.
+#
+
+MAZE: "Aet-fila" , 'C'
+INIT_MAP: '.' , 'T' , true , true , lit, false
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT:'(',"ice box",random
+#
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'D', "blue dragon", random, hostile
+MONSTER: 'D', "baby hydra", random, hostile
+MONSTER: 'D', "wyvern", random, hostile
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+
+MAZE: "Aet-filb" , 'C'
+INIT_MAP: '.' , 'T' , true , true , lit, false
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'E', "lightning elemental", random
+MONSTER: 'D', "blue dragon", random, hostile
+MONSTER: 'D', "hydra", random, hostile
+#
+TRAP: "magic", random
+TRAP: "magic", random
+TRAP: "magic", random
+TRAP: "magic", random
+TRAP: "magic", random
+TRAP: random, random
+TRAP: random, random

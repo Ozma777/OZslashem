@@ -1,0 +1,408 @@
+#	SCCS Id: @(#)EarthMage.des	3.4	1992/09/26
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991,92 by M. Stephenson, P. Winner
+#       Copyleft -Ozma777
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, High Earth Mage
+#	and receive your quest assignment.
+#same with this one (backed up shallow pool des and changed to clouds) although wall needed for drawbridge and stairs changed to random
+MAZE: "Ear-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+.....................................wPPPPPPPPPw......|--------------------|
+...T................................wPPPPPPPPPPPPw....||-------------------|
+......................T.............PPPPPPPPPPPw......||....|...|...|..|...|
+..........T.........................wPPPPPPPPPPPw.....||....|...|...|..|...|
+..............................T......wPPPPPPPPPw......||....|...|...|..|...|
+....T.................................wPPPPPPw........||--+-|...|-+-|..|-+-|
+................T.....T................wPPPPw.........||...................|
+........................................wPPw..........||......P............|
+................................T......wwww...........++.....PPP............
+.........T...........T...............ww.w.............++......PPP...........
+...........................T........wPPw..............||.....PPP...........|
+...............T...................wPPPPw.............||......P............|
+.T..................................wPPPPw............||...................|
+.....................T.............wPPPPPw............||...................|
+....T.............................wPPPPPw.............||-+--|..|-+-|...|-+-|
+.................T.......T.......wPPPPPPw.............||....|..|...|...|...|
+..................................wPPPPPPPw...........||....|..|...|...|...|
+......................T..........wPPPPPPPPPw..........||....|..|...|...|...|
+..........T....................wPPPPPPPPPPPw..........||-------------------|
+...........................T....wPPPPPPPPPPPw.........|--------------------|
+ENDMAP
+# Dungeon Description
+REGION:(00,00,54,19),unlit,"ordinary"
+REGION:(56,02,74,17),lit,"ordinary"
+REGION:(56,02,59,04),lit,"shop"
+DOOR:closed,(58,05)
+REGION:(65,02,67,04),lit,"temple"
+# The temple altar (this will force a priest(ess) to be created)
+ALTAR:(66,03),coaligned,shrine
+DOOR:closed,(66,05)
+REGION:(72,02,74,04),lit,"tool shop"
+DOOR:closed,(73,05)
+REGION:(56,15,59,17),lit,"food shop"
+DOOR:closed,(57,14)
+REGION:(64,15,66,17),lit,"pet shop"
+DOOR:closed,(65,14)
+REGION:(72,15,74,17),lit,"shop"
+DOOR:closed,(73,14)
+# Stairs
+STAIR:(75,08),down
+# Portal arrival point
+BRANCH:(01,18,01,18),(0,0,0,0)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Doors to the city
+DOOR:locked,(54,08)
+DOOR:locked,(54,09)
+FOUNTAIN:(64,08)
+FOUNTAIN:(65,09)
+FOUNTAIN:(64,10)
+#Fish in the pond
+MONSTER: ';', "trout", (62,08), peaceful
+MONSTER: ';', "trout", (63,09), peaceful
+MONSTER: ';', "trout", (62,10), peaceful
+# river monsters
+MONSTER: ';', "shark", (39,01)
+MONSTER: ';', "shark", (44,03)
+MONSTER: ';', "shark", (46,05)
+MONSTER: ';', "shark", (42,07)
+MONSTER: ';', "shark", (40,19)
+MONSTER: ';', "shark", (37,18)
+MONSTER: ';', "shark", (39,17)
+MONSTER: ';', "shark", (35,16)
+# Monsters on siege duty.
+MONSTER: random,random,(00,00)
+MONSTER: random,random,(28,01)
+MONSTER: random,random,(13,02)
+MONSTER: random,random,(20,03)
+MONSTER: random,random,(27,04)
+MONSTER: random,random,(11,05)
+MONSTER: random,random,(29,06)
+MONSTER: random,random,(20,07)
+MONSTER: random,random,(30,08)
+MONSTER: random,random,(04,09)
+MONSTER: random,random,(18,10)
+MONSTER: random,random,(31,11)
+MONSTER: random,random,(10,12)
+MONSTER: random,random,(26,13)
+MONSTER: random,random,(32,14)
+MONSTER: random,random,(07,15)
+MONSTER: random,random,(14,16)
+MONSTER: random,random,(04,17)
+MONSTER: random,random,(32,18)
+MONSTER: random,random,(18,19)
+MONSTER:'T',"carnivorous tree",(11,06),hostile
+MONSTER:'T',"carnivorous tree",(32,15),hostile
+MONSTER:'T',"carnivorous tree",(09,15),hostile
+MONSTER:'T',"carnivorous tree",(22,19),hostile
+MONSTER:'T',"carnivorous tree",(08,11),hostile
+MONSTER:'T',"carnivorous tree",(28,06),hostile
+MONSTER:'T',"carnivorous tree",(28,08),hostile
+MONSTER:'T',"carnivorous tree",(06,02),hostile
+MONSTER:'T',"carnivorous tree",(04,19),hostile
+MONSTER:'D',"stone dragon",(19,08),peaceful
+#High Earth Mage
+MONSTER:'@',"High Earth Mage",(74,09)
+# The treasure of the High Earth Mage
+OBJECT:'(',"chest",(75,09)
+# guides for the audience chamber
+MONSTER:'@',"digger",(62,03)
+MONSTER:'@',"digger",(69,04)
+MONSTER:'@',"digger",(61,17)
+MONSTER:'@',"digger",(69,16)
+MONSTER:'@',"digger",(57,07)
+MONSTER:'@',"digger",(59,09)
+MONSTER:'@',"digger",(65,10)
+MONSTER:'@',"digger",(67,11)
+MONSTER:'@',"digger",(69,07)
+MONSTER:'@',"digger",(70,09)
+MONSTER:'@',"digger",(71,11)
+# path guards
+MONSTER:'@',"watchman",(53,07)
+MONSTER:'@',"watchman",(53,10)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+
+#
+#       The "locate" level for the quest.
+#
+#       Here you have to find the entrance to the
+#		Wood Mage's cave to finish your assigned quest.
+#
+
+MAZE: "Ear-loca",' '
+FLAGS: hardfloor
+INIT_MAP: '.' , 'T' , true , true , lit , false
+GEOMETRY:center,center
+MAP
+PPPP....                      ....PPPPP.
+PTP...                          .PPTTTPP
+PPP    .......................    PPPTTP
+..   ............................   PPPP
+.  ...............................  ....
+  .................................   ..
+....................................   .
+  ...................................   
+.  ..................................  .
+..   ..............................   PP
+.PPP  ..........................     PTP
+.PTTP                             ..PTTP
+.PPPP..                         ....PPPP
+ENDMAP
+# Dungeon Description
+REGION:(00,00,39,12),lit,"ordinary"
+# Stairs
+STAIR:(48,14),up
+STAIR:(20,06),down
+# Non diggable walls
+NON_DIGGABLE:(00,00,39,12)
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Monsters.
+MONSTER:'E',"noxious elemental",random,hostile
+MONSTER:'E',"noxious elemental",random,hostile
+MONSTER:'D',"green dragon",random,hostile
+MONSTER:'D',"yellow dragon",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet the Wood Mage your Nemesis.  You have to defeat
+#	the Wood Mage in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Ear-goal", ' '
+GEOMETRY:center,center
+MAP
+...................................
+..T.T           CPC          T.T...
+.T.        .............        .T.
+..       ..T|---------|T..       ..
+T       .T|--.........--|T.       T
+        .|-..T   S   T..-|.        
+       .T|..T  .C..C  T..|T.       
+       .|-.T  C...C..  T.-|.       
+       .|..T  ..C...C  T..|.       
+       .|-.T  C...C..  T.-|.       
+       .T|..T  .C.C.  T..|T.       
+        .|-..T   S   T..-|.        
+T       .T|--.........--|T.       T
+..       ..T|---------|T..       ..
+..T        .............        T..
+.T..T           CPC           T..T.
+...................................
+ENDMAP
+# Dungeon Description
+REGION:(00,00,34,16),lit,"ordinary"
+# Stairs
+# Note:  The up stairs are *intentionally* off of the map.
+STAIR: random, up
+# Non diggable walls
+NON_DIGGABLE:(00,00,34,16)
+# Drawbridges
+DRAWBRIDGE:(17,02),south,closed
+DRAWBRIDGE:(17,14),north,closed
+# Objects
+OBJECT:'(', "drum of earthquake", (04,01), blessed, 0, "The Drum of the Stone Warrior"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# The trees are alive!
+MONSTER:'@',"Wood Mage",(04,01),hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+MONSTER:'T',"carnivorous tree",random,hostile
+
+WALLIFY
+
+#
+#	The "fill" level for the quest.
+#
+#	This level is used to fill out any levels not occupied by specific
+#	levels as defined above.
+#
+
+MAZE: "Ear-fila" , ' '
+INIT_MAP: '.' , ' ', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: '@', "soldier", random, hostile
+MONSTER: '@', "soldier", random, hostile
+MONSTER: '@', "soldier", random, hostile
+MONSTER: '@', "soldier", random, hostile
+MONSTER: '@', "soldier", random, hostile
+MONSTER: 'H', random, random, hostile
+MONSTER: 'C', random, random, hostile
+
+MAZE: "Ear-filb" , ' '
+INIT_MAP: '.' , ' ', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: '@', "soldier", random, hostile
+MONSTER: '@', "captain", random, hostile
+MONSTER: '@', "captain", random, hostile
+MONSTER: 'H', random, random, hostile
+MONSTER: 'H', random, random, hostile
+MONSTER: 'C', random, random, hostile
+MONSTER: 's', random, random

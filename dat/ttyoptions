@@ -1,0 +1,23 @@
+
+    SlashEM version 0.0.7E7F2
+
+Options compiled into this edition:
+
+    blackmarket level, color, data librarian, debug mode, Elbereth,
+    experience points on status line,
+    insurance files for recovering from crashes, light sourced spell effects,
+    invisible objects, Keystone Kops, exclusive lock on level 0 file,
+    log file, news file, redo command, rogue level, saddles and riding,
+    display layers, screen clipping, screen control via WIN32 console I/O,
+    seduction, show damage amounts, show weight of inventory, sinks,
+    lightsabers and dim lightsabers, Jedi, bards, convicts, Houchou,
+    firearms, tourists, user sounds via pmatch, walled mazes, yeomen,
+    zero-compressed save files,
+    save and bones files accepted from versions 0.0.7E2 through 0.0.7E7,
+    basic NetHack features.
+
+Supported windowing systems:
+
+    traditional tty-based graphics,
+    with a default of tty.
+

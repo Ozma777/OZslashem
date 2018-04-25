@@ -1,0 +1,328 @@
+#	SCCS Id: @(#)Bard.des	3.4	1995/04/16
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991,92 by M. Stephenson
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, Orpheus
+#	and receive your quest assignment.
+#
+MAZE: "Brd-strt",'.'
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+.......................................................}}........T..........
+.....T..............................................T...}}.............T....
+...........------------------------......................}}.................
+...........|......|.......|.......|..--...--.............}}.................
+...........|......|.......S...{...|..--...--.....T......}}..................
+..L........|---S--|.......|.......|.....................}}..................
+...........|......|.......--......|.......--.......T....}}......T...........
+....LLL....|......|........|.....--.......--...........}}...................
+......L....|......--.......|.....|.....................}.............}}}..T.
+...LLLL....|.......+.......|.....+........--..........}}........T...}}.}}}..
+...LL..L...|.\.....+.......|.....+........--.......T..}}............}...}}..
+...........|......--.......|.....|.....................}}....T.....}}....}..
+......L....|......|........|.....--.......--...T..T.....}}........T}..T...}.
+..L........|......|.......--......|.......--.........T...}}}}....}}.......}.
+...........|---S--|.......|.......|.........................}}...}........}.
+...........|......|.......S...{...|..--...--....T............}}.T}}....T.T}.
+...........|......|.......|.......|..--...--..................}...}.......}.
+.......T...------------------------........T...............T..}}.}}T.....}..
+.....................T.........................................}}}......}}..
+..................................................T...................}}}...
+..T..................................................................}}....T
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,20),lit,"ordinary"
+# Stairs
+STAIR:(05,08),down
+# Portal arrival point
+BRANCH:(73,02,73,02),(0,0,0,0)
+# Doors
+DOOR:closed,(15,05)
+DOOR:closed,(15,14)
+DOOR:locked,(26,04)
+DOOR:locked,(26,15)
+DOOR:locked,(19,09)
+DOOR:locked,(19,10)
+DOOR:locked,(33,09)
+DOOR:locked,(33,10)
+# Orpheus
+MONSTER:'@',"Orpheus",(13,10)
+# The treasure of Orpheus
+OBJECT:'(',"chest",(13,10)
+# Other treasures
+OBJECT[33%]:'(',"chest",(14,04)
+OBJECT[33%]:'(',"chest",(14,15)
+# Statues
+OBJECT:'`',"statue",(35,07), "gnome", 2
+OBJECT:'`',"statue",(35,12), "gnome", 2
+OBJECT:'`',"statue",(22,05), "gnome", 2
+OBJECT:'`',"statue",(22,14), "gnome", 2
+# Rhymers for the audience chamber
+MONSTER:'@',"rhymer",(12,07)
+MONSTER:'@',"rhymer",(13,07)
+MONSTER:'@',"rhymer",(14,07)
+MONSTER:'@',"rhymer",(15,07)
+MONSTER:'@',"rhymer",(12,13)
+MONSTER:'@',"rhymer",(13,13)
+MONSTER:'@',"rhymer",(14,13)
+MONSTER:'@',"rhymer",(15,13)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Nymphs next of river
+MONSTER: 'n',random,(62,07),peaceful
+MONSTER: 'n',random,(67,10),peaceful
+MONSTER: 'n',random,random,peaceful
+MONSTER: 'n',random,random,peaceful
+MONSTER: 'n',random,(68,02),peaceful
+MONSTER: 'n',random,(71,07),peaceful
+MONSTER: 'n',random,(72,15),peaceful
+# Monsters on siege duty.
+MONSTER: ';',"piranha",random,hostile
+MONSTER: ';',"piranha",random,hostile
+MONSTER: ';',"piranha",random,hostile
+MONSTER: ' ',random,random,hostile
+MONSTER: ' ',random,random,hostile
+MONSTER: ' ',random,random,hostile
+MONSTER: ' ',random,random,hostile
+MONSTER: ' ',random,random,hostile
+
+
+
+
+#
+#	The "locate" level for the quest.
+#
+#	Here you have to cross the Styx river guarded by Charon,
+#	then cross the drawbridge guarded by Cerberus, to descend
+#	further towards your assigned quest.
+#
+
+MAZE: "Brd-loca",' '
+FLAGS: hardfloor
+GEOMETRY:center,center
+MAP
+...........................................................}}}}..LLLLLLLLL..
+...........................................................}}}..LLLL---LLLL.
+....}}}}}}}...............................................}}}}..LLL--.--LLL.
+}}}}}}}}}}}}}.............................................}}}...LL--...--LL.
+}}}}.....}}}}}............................................}}....LL|.....|LL.
+............}}}}...}}}}}}}.............................}}}}}....LL--...--LL.
+.............}}}}}}}}}}}.}}}}}}}......................}}}}......LLL--.--LLL.
+...............}}}}}}}}.}.}.}.}}}}}}}}}}............}}}}........LLLL---LLLL.
+................}}}}}}.}.}.}.}.}.}.}.}.}}}}}......}}}}}}.........LLLLLLLLL..
+.............}}}}}}.}.}.}.}.}.}.}.}.}.}.}.}}}}}}}}}}}}}.....................
+.........}}}}}}}}.}}.}.}.}.}.}.}.}.}.}.}.}.}.}}}}}}}........................
+.......}}}}}}}.....}}.}.}.}.}.}.}.}.}.}.}.}.}}}}}...........................
+......}}}...........}}.}.}.}.}.}.}.}.}.}.}.}.}}}}}}.........................
+}..}}}}}}............}}.}.}.}.}.}.}.}.}.}.}.}}}.}}}}}}......................
+}}}}}}}...............}}}}}}}}}}.}.}.}.}.}.}}.....}}}}}}}...................
+}}}}}...................}}}}}}}}}}}.}.}}}}}}.........}}}}}}.................
+}}}.............................}}}}}}}}................}}}}}}..............
+.........................................................}}}}}}}............
+..........................................................}}}}}}}}}.........
+...........................................................}}}}}}}}}}.......
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),unlit,"ordinary"
+REGION:(68,03,70,05),lit,"ordinary",unfilled,true
+# Doors
+#DOOR:locked,(28,11)
+# Stairs
+STAIR:(01,08),up
+STAIR:(69,04),down
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# The drawbridge
+DRAWBRIDGE:(69,08),north,closed
+# Objects
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:'(',random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Charon e Cerberus
+MONSTER:'d',random,(68,10),hostile
+# Random monsters.
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:'Z',"human zombie",random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+MONSTER:' ',random,random,random
+
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet Hades your nemesis monster.  You have to
+#	defeat Hades in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Brd-goal", ' '
+GEOMETRY:center,center
+MAP
+              ....                   F  F F           ......                
+            .......              F .........  F    ...   ....               
+           .........        F  ...............    .      ..                 
+    ..      .......      F  ....................   ..       ......          
+   .....        .         ...................... ..  .     ..    ..  ...    
+  ........       ..      ........................     .   ..      .......   
+ .........         .    .............LLL..........     F  .        .......  
+.....\.....        .    ...........LLLLLLL.........     .. .       ......   
+...........      ..     ..........LLLLLLLLL.........  ..    ..      ....    
+ ........       .       .........LLLLLLLLLLL..........        .      ..     
+  .......       .      ..........LLLLLLLLLLL.........         ...    .      
+   ...  .        ..    ..........LLLLLLLLLLL.........       .....    .      
+         .    ...  .   ...........LLLLLLLLL...........      ....    .       
+          ....      .  ............LLLLLLL............             .        
+  ...   ..    .  ..  .  .............LLL..............        .....         
+ .......       .....F .. ............................        .         ..
+  ...            ..        .........................         .        ....  
+                          F    ...................            ...    .....  
+                               F  ..............  F              .......    
+                                   F   F F  F   F                           
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),unlit,"ordinary"
+REGION:(23,00,53,19),lit,"ordinary"
+# Stairs
+STAIR:(70,06),up
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Objects
+OBJECT:'(',"wooden harp",(05,07),blessed,0,"The Lyre of Harmony"
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Quest nemesis
+MONSTER:'L',"Hades",(05,07),asleep
+# Monsters in caves at left
+MONSTER:'Z',"skeleton",(14,02)
+MONSTER:'Z',"skeleton",(15,02)
+MONSTER:'W',"barrow wight",(16,02)
+MONSTER:'W',"barrow wight",(03,15)
+MONSTER:'W',"wraith",(18,15)
+# Monsters in caves at right
+MONSTER:'Z',"skeleton",(57,01)
+MONSTER:'Z',"skeleton",(62,11)
+MONSTER:'Z',"skeleton",(70,16)
+
+
+#
+#	The "fill" levels for the quest.
+#
+#	These levels are used to fill out any levels not occupied by specific
+#	levels as defined above. "filla" is the upper filler, between the
+#	start and locate levels, and "fillb" the lower between the locate
+#	and goal levels.
+#
+
+MAZE: "Brd-fila" , ' '
+INIT_MAP: '.' , ' ' , true , true , random , true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: 'Z', random, random, hostile
+MONSTER: 'Z', random, random, hostile
+MONSTER: 'Z', random, random, hostile
+MONSTER: 'Z', random, random, hostile
+MONSTER: ' ', random, random, hostile
+MONSTER: ' ', random, random, hostile
+MONSTER: ' ', random, random, hostile
+
+
+MAZE: "Brd-filb" , ' '
+INIT_MAP: '.' , 'L' , true , true , random , true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: 'W', random, random, hostile
+MONSTER: 'W', random, random, hostile
+MONSTER: 'W', random, random, hostile
+MONSTER: ' ', random, random, hostile
+MONSTER: ' ', random, random, hostile
+MONSTER: ' ', random, random, hostile
+MONSTER: ' ', random, random, hostile

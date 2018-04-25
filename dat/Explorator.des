@@ -1,0 +1,383 @@
+#	SCCS Id: @(#)Explorator.des	3.4	1992/09/26
+#	Copyright (c) 1989 by Jean-Christophe Collet
+#	Copyright (c) 1991,92 by M. Stephenson, P. Winner
+#       Copyleft -Ozma777
+# NetHack may be freely redistributed.  See license for details.
+#
+#	The "start" level for the quest.
+#
+#	Here you meet your (besieged) class leader, Someone?
+#	and receive your quest assignment.
+#  took the w's (shallow water) and changed to clouds until I can get it to work (backed up original)
+MAZE: "Exp-strt",' '
+FLAGS: noteleport,hardfloor
+GEOMETRY:center,center
+MAP
+.    .......   ......PPPPP...................PPPPP...........--------------.
+.. ..........  ........PPP....................PPP............|.wPPPPPPPw....
+.. ..........  ...T...PPPP..............T....PPPP.......T...--..wPPPPPw.....
+............. .........PPP....................PPP...........|....wPPPw......
+ ....T................PPPPP..................PPP...........--....wPPw.......
+  ...................PPPPP.......T...........PP............|.....www........
+  ....................PPPP..................PP....T.......--....wwwww.......
+ ...........T..........PPPP.................PPP...........|....www..ww......
+ .......................PP............  ...PP............--....ww....w......
+.....................................    ................|....ww....www.....
+.....T...........T......  ............  ........T.......--.....ww..www......
+ ......................   ....T......   ................|.....ww...w.ww.....
+ ......................   ...........  .................---..www..www.ww...|
+ .....................     .........  ....................||..ww....www....|
+  .........T...........   ..........  .......P......T......--wwww..www----|.
+  ...................     ..T.......  ......PP..............ww..ww..www.....
+   ...................    ...................PP............www.www....ww....
+   ....T............     ...................PPP...........www...wwww.wwww...
+    ................       ........T.........PPP.......T...ww.....ww..www...
+      ............          .................PPPP.........wwww...wwww...ww..
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# Stairs
+STAIR:(75,00),down
+# Portal arrival point
+BRANCH:(00,00,00,00),(0,0,0,0)
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# river monsters
+MONSTER:';',"trout",(60,18)
+MONSTER:';',"trout",(59,16)
+MONSTER:';',"trout",(66,17)
+MONSTER:';',"trout",(71,17)
+MONSTER:';',"trout",(69,13)
+MONSTER:';',"trout",(64,07)
+MONSTER:';',"trout",(68,06)
+MONSTER:';',"trout",(63,09)
+MONSTER:';',"trout",(71,12)
+MONSTER:';',"trout",(66,05)
+MONSTER:';',"trout",(67,10)
+MONSTER:';',"trout",(63,01)
+MONSTER:';',"trout",(70,02)
+MONSTER:';',"giant crab",(66,01)
+MONSTER:';',"giant crab",(67,02)
+MONSTER:';',"giant crab",(68,03)
+MONSTER:';',"giant crab",(66,04)
+# Monsters on siege duty.
+MONSTER: 's',"giant spider",random
+MONSTER: 's',"giant spider",random
+MONSTER: 's',"giant spider",random
+MONSTER: 's',"giant spider",random
+MONSTER: 'S',"white snake",random
+MONSTER: 'S',"white snake",random
+MONSTER: 'S',"white snake",random
+MONSTER: 'S',"white snake",random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: 's',random,random
+MONSTER: 's',random,random
+MONSTER: 's',random,random
+MONSTER: 'S',random,random
+MONSTER: 'S',random,random
+MONSTER: 'S',random,random
+MONSTER: 'f',random,random
+MONSTER: 'f',random,random
+MONSTER: 'f',random,random
+MONSTER: 'd',random,random
+MONSTER: 'd',random,random
+MONSTER: 'd',random,random
+# Master Guide
+MONSTER:'@',"Master Guide",(66,07)
+# The treasure of the Master Guide
+OBJECT:'(',"chest",(67,07)
+# fellow explorers for the audience chamber
+MONSTER:'@',"fellow explorer",(29,03)
+MONSTER:'@',"fellow explorer",(32,04)
+MONSTER:'@',"fellow explorer",(35,02)
+MONSTER:'@',"fellow explorer",(38,03)
+MONSTER:'@',"fellow explorer",(45,03)
+MONSTER:'@',"fellow explorer",(48,02)
+MONSTER:'@',"fellow explorer",(49,04)
+MONSTER:'@',"fellow explorer",(51,03)
+MONSTER:'@',"fellow explorer",(57,03)
+MONSTER:'@',"fellow explorer",(62,04)
+MONSTER:'@',"fellow explorer",(66,04)
+# path guards
+MONSTER:'@',"fellow explorer",(35,08)
+MONSTER:'@',"fellow explorer",(36,08)
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+
+#
+#	The "locate" level for the quest.
+#
+#	The underground? Forest think of it as a cave exit
+#    to a Hidden Valley to another cave entrance.
+#
+
+MAZE: "Exp-loca",' '
+FLAGS: hardfloor
+GEOMETRY:center,center
+MAP
+..T...............T......T..T..T......T.....T..........T...........T........
+...........T..........T......T..........T.T...T..............T.........T....
+.....T..................T.........TT.......T.......T....T........T..........
+.............T.......T....T.T...T....T...T..T...............................
+..T......T.............T.....T.T......T.T....T..................T...........
+.................T..T.....T...T..T..T..T..T...T.....T.......T...........T...
+.......T....T..........T.......T..TT..T......T....................T.........
+..........................T..T...T..T...T....T.T......T......T..............
+...T....T......T....T.......T...TT..TT...T..T...............................
+.......................T...T.T..T....T..T.......T........T........T.........
+........T..........T..........T........T....T........T......................
+...............T.........T....T........T..T..T................T...T.........
+...T........T........T.......T..T....T..T...T............T...........T......
+........T................T..T...TT..TT...T....T....T........................
+............T........T.......T...T..T...T..T.........T.........T............
+....T............T......T......T..TT..T..T...T..........T.............T.....
+.............T.......T....T...T..T..T..T....T.T...T...............T.........
+.....T.......................T.T......T.T....T..........T..T................
+...........T.....T......T...T...T....T...T.T..T......T........T.............
+.....T........T..........T....T...TT...T....T....T.........T..........T.....
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+NON_DIGGABLE:(00,00,75,19)
+#
+REGION:(33,09,36,12),lit,"temple"
+# The temple altar (this will force a priest(ess) to be created)
+ALTAR:(35,10),coaligned,shrine
+# Stairs
+STAIR:random,up
+STAIR:random,down
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Objects
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER: random,random,random
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER: 's',random,random
+MONSTER: 's',random,random
+MONSTER: 's',random,random
+MONSTER: 'S',random,random
+MONSTER: 'S',random,random
+MONSTER: 'S',random,random
+MONSTER: 'f',random,random
+MONSTER: 'f',random,random
+MONSTER: 'f',random,random
+MONSTER: 'd',random,random
+MONSTER: 'd',random,random
+MONSTER: 'd',random,random
+
+#
+#	The "goal" level for the quest.
+#
+#	Here you meet the The Vandal Leader your Nemesis.  You have to
+#	defeat the The Vandal Leader in combat to gain the artifact you have
+#	been assigned to retrieve.
+#
+
+MAZE: "Exp-goal", ' '
+GEOMETRY:center,center
+MAP
+............PPP.............................................................
+...........PPPPP.............T..................T...................T.......
+.....T......PPPPP....T.................PP...................................
+.T...........PPPP....................PPPPP..................................
+..............PP....................PPPPPP...........T.......PP.............
+...................................PPPPPP......T............PPP.............
+............T.........PP......T.....PPPPPP.................PPP..............
+.....................PPP...........PPPPP....................PPP.............
+....T...............PPPP.............PPP.....................PP.....T.......
+.....................PPP..............PP......PP.......T....................
+......................PP.....................PPP............................
+......T.PP..................T...............PPPP............................
+.......PPPP......T...........................PPPP.......PP..................
+........PPPP.......................PP....T.....PP......PPPP.........T.......
+.........PPP..........PP.......T..PPPP..................PPPP...T............
+..........PP.........PPP...........PPP...................PPP................
+......................PP...T........PP....................PP................
+...T.........................................T........................T.....
+...............T..................T.........................................
+......................T..............................T......................
+ENDMAP
+# Dungeon Description
+REGION:(00,00,75,19),lit,"ordinary"
+# Non diggable walls
+NON_DIGGABLE:(00,00,75,19)
+# Stairs
+STAIR:random,up
+# Quest Nemesis and the artifact
+MONSTER:'@',"The Vandal Leader",(01,01),hostile
+OBJECT:')',"quarterstaff",(01,01),blessed,0,"The Staff Of Speed Walking"
+# Object
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+OBJECT:random,random,random
+# Random traps
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+TRAP:random,random
+# Random monsters.
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+MONSTER:'@',"raider",random,hostile
+
+#
+#	The "fill" level for the quest.
+#
+#	This level is used to fill out any levels not occupied by specific
+#	levels as defined above.
+#
+
+MAZE: "Exp-fila" , ' '
+INIT_MAP: '.' , 'w', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+
+MAZE: "Exp-filb" , ' '
+INIT_MAP: '.' , ' ', true, true, random, true
+NOMAP
+#
+STAIR: random, up
+STAIR: random, down
+#
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+OBJECT: random, random, random
+#
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+TRAP: random, random
+#
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
+MONSTER: random, random, random, hostile
