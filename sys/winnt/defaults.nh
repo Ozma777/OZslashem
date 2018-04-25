@@ -1,0 +1,148 @@
+#	NetHack Copyright (c) NetHack PC Development Team 1993, 1996, 1999
+#	NetHack may be freely redistributed.  See license for details.
+#
+# A '#' at the beginning of a line means the rest of the line is a comment.
+#
+# Some options MUST be set in this file, other options can be toggled while
+# playing.  For a list of options available see the <opthelp.> file.  If
+# the game plays slowly you might notice some improvement by setting
+# !time and !showexp, which will reduce screen I/O somewhat.
+#
+# To change the configuration, comment out the unwanted lines, and
+# uncomment the configuration you want.
+#
+# Note: For blind players, please use the file NHAccess.nh as a template.
+#
+
+# *** OPTIONS ***
+#
+# The three options on this line should be used for most setups.  
+# If your machine isn't very IBM-compatible, and NetHack doesn't work, 
+# try commenting out this line.
+OPTIONS=rawio,BIOS,IBMgraphics
+OPTIONS=msghistory:888
+# To use VGA graphical tiles on an MS-DOS PC with VGA or better,uncomment 
+# this:
+#OPTIONS=video:autodetect
+
+# Some versions of NetHack use the pc speaker to play the notes given when
+# playing music instruments in NetHack.  To use this feature, if available,
+# uncomment the following line:
+#OPTIONS=soundcard:autodetect
+
+# If your machine is NEC PC-9800, use:
+#OPTIONS=rawio,BIOS,video:default
+# If you use an Atari and want tty use:
+OPTIONS=windowtype:tty
+
+
+# Some options to set personal preferences.  Uncomment and change these to
+# suit your personal preference.  If several people are to use the same
+# configuration, options like these should not be set.
+#
+#OPTIONS=name:Janet,role:Valkyrie,race:Human,gender:female,align:lawful
+OPTIONS=dogname:d-o-g.....,catname:kitteee...,fruit:mango
+#OPTIONS=coinsname:Counterfeit.... (PILE_OF_COPPER_COINS)
+OPTIONS=hilite_pet,autoquiver,horsename:MR ED.........
+OPTIONS=showexp,showweight,showdmg,autodig,autopickup,pickup_types:$"=/!?+0
+#OPTIONS=packorder:")[%?+/=!(*0_`
+#OPTIONS=scores:10 top/2 around/own
+#OPTIONS=nolegacy,noverbose
+#OPTIONS=menustyle:traditional
+OPTIONS=DEATH_EXPLORE
+OPTIONS=startquestions:racg
+#where r=role, c=race, g=gender, a=alignment. 
+#note: alignment comes first before race because of multiple d's
+#Dwarf and Drow come after doppleganger asking alignment first allows both Dwarf and Drow then also Drakeling added as neutral just to fill all slots
+WIZKIT=wizkit.txt
+
+# If you wish to change the symbol used to display boulders use:
+OPTIONS=boulder:`
+#
+# General options.  You might also set "silent" so as not to attract
+# the boss's attention.
+#
+# number_pad option can have an optional value of 0 (off), 1 (on), 
+# or 2(on,legacy-mode) which causes 5='g', alt-5='G', alt-0='I'
+#
+OPTIONS=time,number_pad:2,lit_corridor
+# Treat space bar as rest. Warning: may be dangerous for new players.
+# OPTIONS=rest_on_space
+
+#
+# If you want to get rid of 'use "r." to read...' use:
+#OPTIONS=suppress_alert:0.0.7
+#
+#
+#HACKDIR=c:\games\nethack
+# 
+# Note: Under MSDOS ports HACKDIR defaults to the location 
+#       of the NetHack.exe file. Setting HACKDIR above will override that.
+#
+#   LEVELS and SAVE default to HACKDIR
+#
+#LEVELS=c:\games\nethack\bones
+#SAVE=c:\games\nethack\bones
+
+# *** CHARACTER GRAPHICS ***
+#
+# See the on-line help or the Guidebook for which symbols are in which
+# positions.
+#±
+# If you merely set the IBMgraphics option as above, NetHack will use IBM
+# extended ASCII for dungeon characters.  If you don't like the selections,
+# you can make up your own via these graphics options, but you should still
+# set IBMgraphics if you are using IBM graphics characters to get the correct
+# processing.
+#
+# The order of the symbols is:
+# solid rock, vertical wall,horizontal wall, upper left corner,
+# upper right corner, lower left corner, lower right corner, cross wall,
+# upward  T wall, downward T wall, leftward T wall, rightward T wall,
+# no door, vertical open door, horizontal open door, vertical closed door,
+# horizontal closed door, IRON BARS, TREE,
+# floor of a room, dark corridor, lit corridor,
+# stairs up, stairs down, ladder up, ladder down, altar, headstone, throne,
+# kitchen sink, toilet, fountain, pool or moat, ice, lava,
+# vertical lowered drawbridge, horizontal lowered drawbridge,
+# vertical raised drawbridge, horizontal raised drawbridge, air, cloud,
+# under water.
+# The defaults using the IBM graphics character set:
+# DUNGEON=032 186 205 201 187 200 188 206 202 203 185 204 \
+#         250 196 179 179 196 035 084 \
+#         250 176 177 030 031 \
+#         024 025 240 239 234 236 \
+#         235 244 247 249 247  \
+#         186 205 186 205 032 035 247                    092 (3rd row 095 precede) was 225 thinking this was throne but NOT
+#042 was switched to 247 (inrow 247 244 042 179) (whatever this means) 196 to 021 lava 179 to 021 (ice) 158 (altar) double047 throne
+# ============================================ 165 is the Y with dashes (tree?) 225 should be throne cant find bars throne close 268
+# Some alternatives: bars 275 246 264 268 276       2nd row counting backwards 177 156 (used to be 249) changed iron bars to 268
+DUNGEON=  032 186 205 201 187 200 188 206 202 203 \
+	   185 204 249 254 254 239 239 268 156 156 177 \
+	   030 030 060 062 095 092 926 244 247 155 \
+	   154 244 247 021 021 046 035 231 177
+
+TRAPS=    094 094 094 094 094 094 094 094 094 094 \
+	   094 094 094 094 094 034 094 094 094 094 \
+	   094 094
+
+
+# Using the DEC Rainbow/ANSI line-drawing character set:
+#
+# If you have compiled with TERMLIB, merely set the DECgraphics option as
+# above.  NetHack will then switch into the VTxxx line-drawing character set
+# (aka ANSI ruling character set '0') for dungeon characters.  If you don't
+# like the selections, you can make up your own via the graphics options,
+# adding 128 to the value of any line-drawing character you want to use.
+# (But you should still set DECgraphics to get the correct processing.)
+
+# *** VIDEOCOLORS AND VIDEOSHADES ***
+#
+# While playing on NEC PC-9800, default game display may be difficult to
+# read.  Try following setting.
+#
+#OPTIONS=videocolors:4-2-6-1-5-3-4-2-6-1-5-3,videoshades:normal-normal-normal
+#
+# DEC Rainbows will hang if rawio is set, so they should instead use:
+#OPTIONS=BIOS,DECgraphics
+
