@@ -5,6 +5,8 @@ CURRENTLY BROKEN AND WILL NOT BUILD!
 the old version is prebuilt in the zip file but it is really not anywhere near ALL the changes to the source I made after.
 quick notes on https://github.com/Ozma777/OZslashem/blob/master/OzSlashem(PrebuiltOld).zip
 
+MAKE SURE you savescum or you might find that some random problem kills your game with a unexpected cannibalistic thing or level crash
+
 EDIT: MAJOR PROBLEM I FORGOT! ALL the traps are different colours (you can blame L's terrain patch for that)
 great patch but columns do not work ALL the traps get messed up and engulf and explode glyphs are messed up too
 
