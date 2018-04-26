@@ -4,6 +4,10 @@ CURRENTLY BROKEN AND WILL NOT BUILD!
 
 the old version is prebuilt in the zip file but it is really not anywhere near ALL the changes to the source I made after.
 quick notes on https://github.com/Ozma777/OZslashem/blob/master/OzSlashem(PrebuiltOld).zip
+
+EDIT: MAJOR PROBLEM I FORGOT! ALL the traps are different colours (you can blame L's terrain patch for that)
+great patch but columns do not work ALL the traps get messed up and engulf and explode glyphs are messed up too
+
 Rerolls and ALL other nethackTNG patches are applied and working (even though my SlashTNG https://github.com/Ozma777/SlashTNG is not).
 Another main change that will be odd is that Askorder patch has been applied:
 Name/Role/ALIGNMENT/then Race.
