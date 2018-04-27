@@ -4489,10 +4489,10 @@ doapply()
 	case WOODEN_FLUTE:
 	case MAGIC_FLUTE:
 	case TOOLED_HORN:
+	case GUITAR:		
 	case FROST_HORN:
 	case FIRE_HORN:
 	case WOODEN_HARP:
-	case GUITAR:
 	case MAGIC_HARP:
 	case BUGLE:
 	case LEATHER_DRUM:
