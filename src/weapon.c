@@ -1815,4 +1815,4 @@ register struct obj *obj;
 
 #endif /* OVLB */
 
-/*weapon.c*/
+/*weapon.c */
