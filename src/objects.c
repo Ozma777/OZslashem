@@ -882,7 +882,7 @@ WEPTOOL("guitar", "guitar", 0, 0, 0, 0,   1, 10, 100, WHACK, P_CLUB, WOOD, CLR_B
 WEPTOOL("unicorn horn", (char *)0,
 	1, 1, 0, 1,  0,  20, 100, 12, 12, 0, PIERCE, P_UNICORN_HORN, BONE, CLR_WHITE),
 WEPTOOL("guitar", (char *)0,
-	1, 1, 0, 1,  18, 40,  40, 15, 15, 0, WHACK, P_CLUB, WOOD, CLR_BRIGHT_MAGENTA, 15),
+	1, 1, 0, 1,  18, 40,  40, 15, 15, 0, WHACK, P_CLUB, POURPOOR, CLR_BRIGHT_BLUE, 15),
 /* WEPTOOL("torch", (char *)0,
 	   1, 0, 0,  0,  25, 8, 5, 2, WHACK, P_CLUB, WOOD, HI_WOOD), */
 
