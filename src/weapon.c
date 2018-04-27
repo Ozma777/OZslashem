@@ -1392,11 +1392,11 @@ struct obj *obj;
 #ifdef CONVICT
     if ((obj->otyp == HEAVY_IRON_BALL) && Role_if(PM_CONVICT))
         return objects[obj->otyp].oc_skill;
-#endif /* CONVICT *//*  temp listing for guitar bash
-#ifdef INSTRUMENTALIST
-    if ((obj->otyp == GUITAR) && Role_if(PM_INSTRUMENTALIST))
-        return objects[obj->otyp].oc_skill;
-#endif */
+#endif /* CONVICT *//*  temp listing for guitar bash hopefully in the right place*/
+
+if (Role_if(PM_INSTRUMENTALIST) && weapon && (weapon->otyp == GUITAR || weapon->otyp == PIANO)) bonus += 10;
+	if (Role_if(PM_BARD) && weapon && (weapon->otyp == GUITAR || weapon->otyp == PIANO)) bonus += 5;
+
 	if (obj->oclass != WEAPON_CLASS && obj->oclass != TOOL_CLASS &&
 	    obj->oclass != GEM_CLASS)
 		/* Not a weapon, weapon-tool, or ammo */
