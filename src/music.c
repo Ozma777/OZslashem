@@ -1324,6 +1324,7 @@ struct obj *instr;
 	    awaken_monsters(u.ulevel * 30);
 	    exercise(A_WIS, FALSE);
 	    break;
+	case GUITAR:		
 	case BUGLE:			/* Awaken & attract soldiers */
 	    You("extract a loud noise from %s.", the(xname(instr)));
 	    awaken_soldiers();
