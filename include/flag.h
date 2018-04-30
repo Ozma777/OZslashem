@@ -196,6 +196,7 @@ struct instance_flags {
 	uchar	bouldersym;	/* symbol for boulder display */
 	boolean	travel1;	/* first travel step */
 	coord	travelcc;	/* coordinates for travel_cache */
+	boolean  qwertz_layout; /* swap y/z for this key layout */
 #ifdef WIZARD
 	boolean  sanity_check;	/* run sanity checks */
 	boolean  mon_polycontrol;	/* debug: control monster polymorphs */
