@@ -154,9 +154,9 @@ Commands:
         X       List the spells you know (same as '+').
         ^X      Show your attributes.
 	^Y	polymorph (if possible)
-        z       Zap a wand.
-        Z       Cast a spell.
-        ^Z      Suspend the game.
+        z       Zap a wand. (y if qwertz_layout is set)
+        Z       Cast a spell. (Y if qwertz_layout is set)
+        ^Z      Suspend the game. (^Y if qwertz_layout is set)
         :       Look at what is here.
         ;       Look at what is somewhere else.
         ,       Pick up some things.
