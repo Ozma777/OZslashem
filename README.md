@@ -19,8 +19,9 @@ If you want to play as a neutral Drakling (can't train weapons yet: see below) j
 or a chaotic Droven jedi pick chaotic then Drow (otherwise lowercase d is always doppleganger).
 
 I think ratling race and maybe giant race are unable to do sokoban properly (on the old prebuilt)...
-Ratlings chew through all boulders and Giants can move onto them if you make a mistake. Might have been fixed already for that version,I
-don't remember. It IS fixed on the new source though.
+Ratlings chew through all boulders and Giants can move onto them if you make a mistake. 
+Might have been fixed already for that version (edit: I just played sokoban with a ratling healer and it IS fixed on the prebuilt)
+
 Drakelings can NOT advance weapons skills, AT_WEAP was stupidly (by me) not a part of the draklings attack in monst.c (also fixed).
 Eventually I want to take mana away for spitting acid (drakling) and musicalize spells (bard) when I figure out how.
 ungenomold/clockwork automaton/incantifier are just simple humans they don't work yet but might work when my new source finally builds.
