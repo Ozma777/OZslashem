@@ -5,14 +5,14 @@ CURRENTLY BROKEN AND WILL NOT BUILD!
 the old version is prebuilt in the zip file but it is really not anywhere near ALL the changes to the source I made after.
 quick notes on https://github.com/Ozma777/OZslashem/blob/master/OzSlashem(PrebuiltOld).zip
 
-<NEW NOTES>:
+(NEW NOTES):
  attempting to RE-update ONLY the prebuilt to a working game WITHOUT Working Clockwork Automaton and Incantifier Races 
   (they will still be simple humans) but the new changes other than those two races should work.
   I will update Readme.MD when this is done,
   (Creating a diff between OldvsNew and then NOT adding Clockwork/Incantifier specifics will be tricky)
   It would of course be easier if someone could figure out why it won't build at present and help fix it.
  
-<OLD NOTES>:
+(OLD NOTES):
 MAKE SURE you savescum or you might find that some random problem kills your game with a unexpected cannibalistic thing or level crash
 
 EDIT: MAJOR PROBLEM I FORGOT! ALL the traps are different colours (you can blame L's terrain patch for that)
