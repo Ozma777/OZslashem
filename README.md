@@ -5,6 +5,14 @@ CURRENTLY BROKEN AND WILL NOT BUILD!
 the old version is prebuilt in the zip file but it is really not anywhere near ALL the changes to the source I made after.
 quick notes on https://github.com/Ozma777/OZslashem/blob/master/OzSlashem(PrebuiltOld).zip
 
+<NEW NOTES>:
+ attempting to RE-update ONLY the prebuilt to a working game WITHOUT Working Clockwork Automaton and Incantifier Races 
+  (they will still be simple humans) but the new changes other than those two races should work.
+  I will update Readme.MD when this is done,
+  (Creating a diff between OldvsNew and then NOT adding Clockwork/Incantifier specifics will be tricky)
+  It would of course be easier if someone could figure out why it won't build at present and help fix it.
+ 
+<OLD NOTES>:
 MAKE SURE you savescum or you might find that some random problem kills your game with a unexpected cannibalistic thing or level crash
 
 EDIT: MAJOR PROBLEM I FORGOT! ALL the traps are different colours (you can blame L's terrain patch for that)
@@ -18,11 +26,12 @@ If you want to play as a neutral Drakling (can't train weapons yet: see below) j
 (they spit acid also so it kind of makes up temporarily for the non-training weapons skill thing.
 or a chaotic Droven jedi pick chaotic then Drow (otherwise lowercase d is always doppleganger).
 
-I think ratling race and maybe giant race are unable to do sokoban properly (on the old prebuilt)...
-Ratlings chew through all boulders and Giants can move onto them if you make a mistake. 
-Might have been fixed already for that version (edit: I just played sokoban with a ratling healer and it IS fixed on the prebuilt)
+(edit: I just played sokoban with a ratling healer and it IS fixed on the prebuilt)
+(disregard next part I only leave it in as "history")
+I think ratling race and maybe giant race are unable to do sokoban properly (on the old prebuilt)...fixed
 
-Drakelings can NOT advance weapons skills, AT_WEAP was stupidly (by me) not a part of the draklings attack in monst.c (also fixed).
+Drakelings can NOT advance weapons skills, AT_WEAP was stupidly (by me) not a part of the draklings attack in monst.c.
+(also fixed on new version when it actually will build).
 Eventually I want to take mana away for spitting acid (drakling) and musicalize spells (bard) when I figure out how.
 ungenomold/clockwork automaton/incantifier are just simple humans they don't work yet but might work when my new source finally builds.
 null race eventually will have NO starting EQ (when I figure out how to do that), but can walk through walls.
